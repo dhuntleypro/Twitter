@@ -19,7 +19,9 @@ struct SearchView: View {
             VStack(alignment: .leading) {
                 ForEach(0..<100) { _ in
                  //   HStack { Spacer() } // quick spacing notation
-                   UserCell()
+                    NavigationLink(destination: UserProfileView()) {
+                        UserCell()
+                    }
                 }
             }
         }

@@ -24,6 +24,10 @@
 		86538F8D25B8554300D7F85F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538F8C25B8554300D7F85F /* Message.swift */; };
 		86538F9025B8599F00D7F85F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538F8F25B8599F00D7F85F /* MessageView.swift */; };
 		86538F9425B85AB500D7F85F /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538F9325B85AB500D7F85F /* NewMessageView.swift */; };
+		86538F9A25B85EBB00D7F85F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538F9925B85EBB00D7F85F /* UserProfileView.swift */; };
+		86538F9E25B85F5100D7F85F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538F9D25B85F5100D7F85F /* ProfileHeaderView.swift */; };
+		86538FA125B85F5F00D7F85F /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */; };
+		86538FA425B85F7000D7F85F /* FIlterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FA325B85F7000D7F85F /* FIlterButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		86538F8C25B8554300D7F85F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		86538F8F25B8599F00D7F85F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		86538F9325B85AB500D7F85F /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
+		86538F9925B85EBB00D7F85F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		86538F9D25B85F5100D7F85F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
+		86538FA325B85F7000D7F85F /* FIlterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIlterButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 		86538F6425B77EAF00D7F85F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86538F9825B85EB000D7F85F /* Profile */,
 				86538F7925B7D15000D7F85F /* Messages */,
 				86538F5525B766B000D7F85F /* ContentView.swift */,
 				86538F6625B77EF000D7F85F /* FeedView.swift */,
@@ -138,6 +147,17 @@
 				86538F9325B85AB500D7F85F /* NewMessageView.swift */,
 			);
 			path = Messages;
+			sourceTree = "<group>";
+		};
+		86538F9825B85EB000D7F85F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				86538F9925B85EBB00D7F85F /* UserProfileView.swift */,
+				86538F9D25B85F5100D7F85F /* ProfileHeaderView.swift */,
+				86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */,
+				86538FA325B85F7000D7F85F /* FIlterButtonView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,14 +233,18 @@
 				86538F8325B84E5F00D7F85F /* MessageInputView.swift in Sources */,
 				86538F5625B766B000D7F85F /* ContentView.swift in Sources */,
 				86538F6725B77EF000D7F85F /* FeedView.swift in Sources */,
+				86538F9E25B85F5100D7F85F /* ProfileHeaderView.swift in Sources */,
 				86538F8725B84FC700D7F85F /* ChatView.swift in Sources */,
 				86538F7C25B7D17D00D7F85F /* ConversationsView.swift in Sources */,
 				86538F5425B766B000D7F85F /* TwitterApp.swift in Sources */,
 				86538F8A25B8526B00D7F85F /* ChatBubble.swift in Sources */,
+				86538FA425B85F7000D7F85F /* FIlterButtonView.swift in Sources */,
 				86538F6B25B79F7000D7F85F /* TweetCell.swift in Sources */,
 				86538F9425B85AB500D7F85F /* NewMessageView.swift in Sources */,
 				86538F8D25B8554300D7F85F /* Message.swift in Sources */,
+				86538F9A25B85EBB00D7F85F /* UserProfileView.swift in Sources */,
 				86538F7325B7CB4700D7F85F /* SearchBar.swift in Sources */,
+				86538FA125B85F5F00D7F85F /* ProfileActionButtonView.swift in Sources */,
 				86538F8025B7D18E00D7F85F /* CoversationCell.swift in Sources */,
 				86538F9025B8599F00D7F85F /* MessageView.swift in Sources */,
 				86538F7725B7CE5600D7F85F /* UserCell.swift in Sources */,
