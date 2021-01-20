@@ -33,6 +33,8 @@
 		86538FC225B889DE00D7F85F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FC125B889DE00D7F85F /* LoginView.swift */; };
 		86538FC625B889E800D7F85F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FC525B889E800D7F85F /* RegistrationView.swift */; };
 		86538FCA25B88B4D00D7F85F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FC925B88B4D00D7F85F /* CustomTextField.swift */; };
+		86538FCF25B8967400D7F85F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FCE25B8967400D7F85F /* CustomSecureField.swift */; };
+		86538FD425B8A4BA00D7F85F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FD325B8A4BA00D7F85F /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		86538FC125B889DE00D7F85F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		86538FC525B889E800D7F85F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		86538FC925B88B4D00D7F85F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		86538FCE25B8967400D7F85F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		86538FD325B8A4BA00D7F85F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,8 @@
 			children = (
 				86538FB925B8850500D7F85F /* TextArea.swift */,
 				86538FC925B88B4D00D7F85F /* CustomTextField.swift */,
+				86538FCE25B8967400D7F85F /* CustomSecureField.swift */,
+				86538FD325B8A4BA00D7F85F /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				86538F7C25B7D17D00D7F85F /* ConversationsView.swift in Sources */,
 				86538F5425B766B000D7F85F /* TwitterApp.swift in Sources */,
 				86538F8A25B8526B00D7F85F /* ChatBubble.swift in Sources */,
+				86538FD425B8A4BA00D7F85F /* ImagePicker.swift in Sources */,
 				86538FA425B85F7000D7F85F /* FilterButtonView.swift in Sources */,
 				86538F6B25B79F7000D7F85F /* TweetCell.swift in Sources */,
 				86538F9425B85AB500D7F85F /* NewMessageView.swift in Sources */,
@@ -298,6 +305,7 @@
 				86538FA125B85F5F00D7F85F /* ProfileActionButtonView.swift in Sources */,
 				86538FCA25B88B4D00D7F85F /* CustomTextField.swift in Sources */,
 				86538F8025B7D18E00D7F85F /* CoversationCell.swift in Sources */,
+				86538FCF25B8967400D7F85F /* CustomSecureField.swift in Sources */,
 				86538F9025B8599F00D7F85F /* MessageView.swift in Sources */,
 				86538F7725B7CE5600D7F85F /* UserCell.swift in Sources */,
 			);

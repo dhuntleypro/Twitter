@@ -1,5 +1,5 @@
 //
-//  CustomTextField.swift
+//  CustomSecureField.swift
 //  Twitter
 //
 //  Created by Darrien Huntley on 1/20/21.
@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-
-// (tip) allow for custom color in tect field
-struct CustomTextField: View {
+struct CustomSecureField: View {
     @Binding var text: String
     let placeholder: Text
-    let imageName : String
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -23,24 +20,15 @@ struct CustomTextField: View {
             }
             
             HStack(spacing: 16) {
-                Image(systemName: imageName)
+                Image(systemName: "lock")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                     .foregroundColor(.white)
                 
-                TextField("", text: $text)
+                SecureField("", text: $text)
             }
         }
     }
 }
 
-struct CustomTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomTextField(text: .constant(""), placeholder:  Text(""), imageName: "envolope")
-            .frame(height: 300)
-            .background(Color.green)
-   
-            
-    }
-}
