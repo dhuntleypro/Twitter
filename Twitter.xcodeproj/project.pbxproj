@@ -27,7 +27,7 @@
 		86538F9A25B85EBB00D7F85F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538F9925B85EBB00D7F85F /* UserProfileView.swift */; };
 		86538F9E25B85F5100D7F85F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538F9D25B85F5100D7F85F /* ProfileHeaderView.swift */; };
 		86538FA125B85F5F00D7F85F /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */; };
-		86538FA425B85F7000D7F85F /* FIlterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FA325B85F7000D7F85F /* FIlterButtonView.swift */; };
+		86538FA425B85F7000D7F85F /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FA325B85F7000D7F85F /* FilterButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +53,7 @@
 		86538F9925B85EBB00D7F85F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		86538F9D25B85F5100D7F85F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
-		86538FA325B85F7000D7F85F /* FIlterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIlterButtonView.swift; sourceTree = "<group>"; };
+		86538FA325B85F7000D7F85F /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 				86538F9925B85EBB00D7F85F /* UserProfileView.swift */,
 				86538F9D25B85F5100D7F85F /* ProfileHeaderView.swift */,
 				86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */,
-				86538FA325B85F7000D7F85F /* FIlterButtonView.swift */,
+				86538FA325B85F7000D7F85F /* FilterButtonView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 				86538F7C25B7D17D00D7F85F /* ConversationsView.swift in Sources */,
 				86538F5425B766B000D7F85F /* TwitterApp.swift in Sources */,
 				86538F8A25B8526B00D7F85F /* ChatBubble.swift in Sources */,
-				86538FA425B85F7000D7F85F /* FIlterButtonView.swift in Sources */,
+				86538FA425B85F7000D7F85F /* FilterButtonView.swift in Sources */,
 				86538F6B25B79F7000D7F85F /* TweetCell.swift in Sources */,
 				86538F9425B85AB500D7F85F /* NewMessageView.swift in Sources */,
 				86538F8D25B8554300D7F85F /* Message.swift in Sources */,
