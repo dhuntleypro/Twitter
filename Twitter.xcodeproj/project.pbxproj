@@ -29,6 +29,7 @@
 		86538FA125B85F5F00D7F85F /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */; };
 		86538FA425B85F7000D7F85F /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FA325B85F7000D7F85F /* FilterButtonView.swift */; };
 		86538FB225B87F9C00D7F85F /* NewTweetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FB125B87F9C00D7F85F /* NewTweetsView.swift */; };
+		86538FBA25B8850500D7F85F /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FB925B8850500D7F85F /* TextArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		86538FA025B85F5F00D7F85F /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
 		86538FA325B85F7000D7F85F /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
 		86538FB125B87F9C00D7F85F /* NewTweetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetsView.swift; sourceTree = "<group>"; };
+		86538FB925B8850500D7F85F /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		86538F5225B766B000D7F85F /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				86538FB725B884ED00D7F85F /* Utils */,
 				86538F5325B766B000D7F85F /* TwitterApp.swift */,
 				86538F6325B77EA900D7F85F /* Model */,
 				86538F6425B77EAF00D7F85F /* View */,
@@ -171,6 +174,22 @@
 			name = Tweets;
 			sourceTree = "<group>";
 		};
+		86538FB725B884ED00D7F85F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				86538FB825B884F800D7F85F /* Views */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		86538FB825B884F800D7F85F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86538FB925B8850500D7F85F /* TextArea.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86538F7025B7CAC100D7F85F /* SearchView.swift in Sources */,
+				86538FBA25B8850500D7F85F /* TextArea.swift in Sources */,
 				86538F8325B84E5F00D7F85F /* MessageInputView.swift in Sources */,
 				86538F5625B766B000D7F85F /* ContentView.swift in Sources */,
 				86538FB225B87F9C00D7F85F /* NewTweetsView.swift in Sources */,

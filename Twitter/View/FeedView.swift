@@ -34,7 +34,7 @@ struct FeedView: View {
                     .padding()
             })
             .background(Color(.systemBlue))
-            .foregroundColor(.white) // Change Image color
+            .foregroundColor(.white) // Change Image color with the help of .renderingMode(.template)
             .clipShape(Circle())
             .padding()
             // (tip) Full screen sheet
