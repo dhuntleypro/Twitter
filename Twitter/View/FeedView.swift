@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FeedView: View {
+    @State var isShowingNewTweetView = false
     var body: some View {
         ZStack(alignment: .bottomTrailing) { // floating bottom button (New tweet)
             ScrollView {
@@ -23,7 +24,9 @@ struct FeedView: View {
             }
             
             
-            Button(action: {}, label: {
+            Button(action: {
+                self.isShowingNewTweetView.toggle()
+            }, label: {
                 Image("Tweet")
                     .resizable()
                     .renderingMode(.template) // Allow editting to image color
@@ -34,6 +37,10 @@ struct FeedView: View {
             .foregroundColor(.white) // Change Image color
             .clipShape(Circle())
             .padding()
+            // (tip) Full screen sheet
+            .fullScreenCover(isPresented: $isShowingNewTweetView) {
+                NewTweetsView(isPresented: $isShowingNewTweetView)
+            }
         }
     }
 }
