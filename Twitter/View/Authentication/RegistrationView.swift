@@ -96,7 +96,7 @@ struct RegistrationView: View {
                 
               
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {}, label: {
                     Text("Sign Up")
                         .font(.headline)
                         .foregroundColor(.blue)
