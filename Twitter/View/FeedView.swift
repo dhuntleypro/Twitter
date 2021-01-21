@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FeedView: View {
     @State var isShowingNewTweetView = false
+    @EnvironmentObject var viewModel: AuthViewModel
+
     var body: some View {
         ZStack(alignment: .bottomTrailing) { // floating bottom button (New tweet)
             ScrollView {
@@ -25,7 +27,8 @@ struct FeedView: View {
             
             
             Button(action: {
-                self.isShowingNewTweetView.toggle()
+            //    self.isShowingNewTweetView.toggle()
+                viewModel.signOut()
             }, label: {
                 Image("Tweet")
                     .resizable()
