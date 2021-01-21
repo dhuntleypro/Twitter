@@ -18,12 +18,13 @@ struct RegistrationView: View {
     @State var selectedUIImage: UIImage?
     @State var image : Image?
     
-    // wich view is being presented and dismiss a screen
+    // Which view is being presented and dismiss a screen
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     // Firebase
-    @ObservedObject var viewModel = AuthViewModel()
-    
+    //@ObservedObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
+
     
     func loadImage() {
         guard let selectedImage  = selectedUIImage else { return }
@@ -68,26 +69,29 @@ struct RegistrationView: View {
                 
                 VStack(spacing: 8) {
                     
+                    // FULLNAME
                     CustomTextField(text: $fullname, placeholder: Text("Full Name") , imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .foregroundColor(.white)
                     
-                    
+                    // EMAIL
                     CustomTextField(text: $email, placeholder: Text("Email") , imageName: "envelope")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .foregroundColor(.white)
                     
-                    
-                    CustomTextField(text: $usernaame, placeholder: Text("Username   ") , imageName: "person")
+                    // USERNAME
+                    CustomTextField(text: $usernaame, placeholder: Text("Username") , imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .foregroundColor(.white)
+                        
                     
+                    // PASSWORD
                     CustomSecureField(text: $password, placeholder: Text("Password"))
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
