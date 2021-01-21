@@ -18,6 +18,8 @@ class AuthViewModel: ObservableObject {
         // SHOW THE CORRECT VIEW - IS THERE A USER ?
         userSession = Auth.auth().currentUser
         
+        // GETS THE DATA
+        fetchUser()
         
         
     }
@@ -97,5 +99,19 @@ class AuthViewModel: ObservableObject {
         userSession = nil
         
         try? Auth.auth().signOut()
+    }
+    
+    func fetchUser() {
+        guard let uid = userSession?.uid else { return }
+
+        
+        Firestore.firestore()
+            .collection("users")
+            .document(uid)
+            .getDocument { (snapshot, _) in
+                guard let data = snapshot?.data() else { return }
+                let user = User(dictionary: data)
+                print("DEBUG: User is \(user.username)")
+            }
     }
 }
