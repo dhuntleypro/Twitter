@@ -21,6 +21,9 @@ struct RegistrationView: View {
     // wich view is being presented and dismiss a screen
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    // Firebase
+    @ObservedObject var viewModel = AuthViewModel()
+    
     
     func loadImage() {
         guard let selectedImage  = selectedUIImage else { return }
@@ -65,7 +68,7 @@ struct RegistrationView: View {
                 
                 VStack(spacing: 8) {
                     
-                    CustomTextField(text: $fullname, placeholder: Text("Email") , imageName: "person")
+                    CustomTextField(text: $fullname, placeholder: Text("Full Name") , imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
@@ -79,7 +82,7 @@ struct RegistrationView: View {
                         .foregroundColor(.white)
                     
                     
-                    CustomTextField(text: $usernaame, placeholder: Text("Email") , imageName: "person")
+                    CustomTextField(text: $usernaame, placeholder: Text("Username   ") , imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
@@ -96,7 +99,16 @@ struct RegistrationView: View {
                 
               
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    guard let image = selectedUIImage else { return }
+                    
+                    viewModel.register(email: email,
+                                       password: password,
+                                       username: usernaame,
+                                       fullname: fullname,
+                                       profileImage: image
+                    )
+                }, label: {
                     Text("Sign Up")
                         .font(.headline)
                         .foregroundColor(.blue)
