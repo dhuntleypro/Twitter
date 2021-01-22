@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-import KingfisherSwiftUI
+import Kingfisher
 
 struct UserCell: View {
     let user: User
