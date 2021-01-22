@@ -42,6 +42,7 @@ class AuthViewModel: ObservableObject {
 
     }
     
+    
     func register(email: String , password: String , username: String , fullname: String, profileImage: UIImage) {
         
         // UPLOAD THE IMAGE UOLOADED BY NEW USER
@@ -95,12 +96,15 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    
     func signOut() {
         userSession = nil
         
         try? Auth.auth().signOut()
+        print("User has signed out")
     }
     
+    // FETCH USER INFORMATION
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
 
@@ -108,6 +112,7 @@ class AuthViewModel: ObservableObject {
         Firestore.firestore()
             .collection("users")
             .document(uid)
+            // usually no error in firebase so no need in include error just _
             .getDocument { (snapshot, _) in
                 guard let data = snapshot?.data() else { return }
                 let user = User(dictionary: data)
