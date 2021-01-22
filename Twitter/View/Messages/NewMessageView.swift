@@ -12,6 +12,8 @@ struct NewMessageView: View {
     @State var searchText = ""
     @Binding var show: Bool
     @Binding var startChat: Bool
+    @ObservedObject var viewModel = SearchViewModel()
+
     
     var body: some View {
         ScrollView {
@@ -19,13 +21,13 @@ struct NewMessageView: View {
                 .padding()
             
             VStack(alignment: .leading) {
-                ForEach(0..<100) { _ in
+                ForEach(viewModel.users) { user in
                  //   HStack { Spacer() } // quick spacing notation
                     // (Tip) gives navigation an formula
                     Button(action: {
                         self.show.toggle()
                     }, label: {
-                        UserCell()
+                        UserCell(user: user)
 
                     })
                 }
