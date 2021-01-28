@@ -5,7 +5,7 @@
 //  Created by Darrien Huntley on 1/21/21.
 //
 
-import SwiftUI
+import Firebase
 
 struct User: Identifiable {
     let id: String
@@ -14,6 +14,7 @@ struct User: Identifiable {
     let fullname: String
     let email: String
     
+    var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.id }
     
     init(dictionary : [String: Any]) {
         self.id = dictionary["uid"] as? String ?? ""
@@ -21,5 +22,6 @@ struct User: Identifiable {
         self.profileImageURL = dictionary["profileImageURL"] as? String ?? ""
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
+
     }
 }

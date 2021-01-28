@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileHeaderView: View {
+    
+    //let user : User // instant in iside of profile view model now (can delete)
+    @State var  selectedFilter: TweetFilterOptions = .tweets
+    @Binding var isFollowed : Bool
+    
+    let viewModel : ProfileViewModel
+   // let user : User
+    
     var body: some View {
         VStack {
-            Image("batman")
+            KFImage(URL(string: viewModel.user.profileImageURL))
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -19,11 +28,11 @@ struct ProfileHeaderView: View {
                 .shadow(color: .black, radius: 6, x: 0.0, y: 0.0)
             
             
-            Text("Burce Wayne")
+            Text(viewModel.user.fullname)
                 .font(.system(size: 14 , weight: .semibold))
                 .padding(.top, 8)
-           
-            Text("@batman")
+            
+            Text("@ \(viewModel.user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
@@ -34,29 +43,30 @@ struct ProfileHeaderView: View {
             HStack(spacing: 40) {
                 
                 VStack {
-                   Text("32M")
-                    .font(.system(size: 16 , weight: .bold))
+                    Text("32M")
+                        .font(.system(size: 16 , weight: .bold))
                     
                     Text("Followers")
-                     .font(.footnote)
+                        .font(.footnote)
                         .foregroundColor(.gray)
                 }
                 
                 VStack {
-                   Text("12")
-                    .font(.system(size: 16 , weight: .bold))
+                    Text("12")
+                        .font(.system(size: 16 , weight: .bold))
                     
                     Text("Following")
-                     .font(.footnote)
+                        .font(.footnote)
                         .foregroundColor(.gray)
                     
                 }
-                
-                
             }
             .padding()
             
-            ProfileActionButtonView(isCurrentUser: false)
+            ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
+            
+            FilterButtonView(selectedOption: $selectedFilter)
+                .padding()
             
             Spacer()
             
@@ -64,8 +74,8 @@ struct ProfileHeaderView: View {
     }
 }
 
-struct ProfileHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileHeaderView()
-    }
-}
+//struct ProfileHeaderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProfileHeaderView(user: User(dictionary: "hh"))
+//    }
+//}
