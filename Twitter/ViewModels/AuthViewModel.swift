@@ -84,8 +84,7 @@ class AuthViewModel: ObservableObject {
                     
                     
                     
-                    Firestore.firestore()
-                        .collection("users")
+                    COLLECTION_USERS
                         .document(user.uid)
                         .setData(data) { _ in
                             self.userSession = user
@@ -109,8 +108,9 @@ class AuthViewModel: ObservableObject {
         guard let uid = userSession?.uid else { return }
 
         
-        Firestore.firestore()
-            .collection("users")
+//        Firestore.firestore()
+//            .collection("users")
+        COLLECTION_USERS
             .document(uid)
             // usually no error in firebase so no need in include error just _
             .getDocument { (snapshot, _) in
