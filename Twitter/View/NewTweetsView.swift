@@ -6,21 +6,35 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct NewTweetsView: View {
     @Binding var isPresented : Bool
     @State var captionText: String = ""
+
+    
+    @ObservedObject var viewModel : UploadTweetViewModel
+    
+    // dismiss view on completion of new tweet being added
+    init(isPresented: Binding<Bool>) {
+        self._isPresented = isPresented
+        self.viewModel = UploadTweetViewModel(isPresented: isPresented)
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack(alignment: .top) {
-                    Image("batman")
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .frame(width: 64, height: 64)
-                        .cornerRadius(32)
+                    // (tip) in order to use Kingfisher images based on user info you need to check that there is a user
+                    if let user = AuthViewModel.shared.user {
+                        KFImage(URL(string: user.profileImageURL))
+                            .resizable()
+                            .scaledToFill()
+                            .clipped()
+                            .frame(width: 64, height: 64)
+                            .cornerRadius(32)
+                    }
+                        
                     
                     TextArea("What's happening", text: $captionText)
                    
@@ -38,7 +52,9 @@ struct NewTweetsView: View {
                         })
                     
                     , trailing:
-                        Button(action: {}, label: {
+                        Button(action: {
+                            viewModel.uploadTweet(caption: captionText)
+                        }, label: {
                             Text("Tweet")
                                 .padding(.horizontal)
                                 .padding(.vertical, 8)

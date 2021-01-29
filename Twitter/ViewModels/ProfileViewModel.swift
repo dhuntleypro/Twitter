@@ -60,7 +60,7 @@ class ProfileViewModel: ObservableObject {
     }
     
     
-    //
+    // check
     func checkIfUserIsFollowed() {
         guard let currenUid = Auth.auth().currentUser?.uid else { return }
 

@@ -48,6 +48,7 @@
 		86538FFA25BA5C8C00D7F85F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FF925BA5C8C00D7F85F /* SearchViewModel.swift */; };
 		86538FFD25BA5D2700D7F85F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86538FFC25BA5D2700D7F85F /* Constants.swift */; };
 		866EF27A25BAEDF300862A34 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 866EF27925BAEDF300862A34 /* Kingfisher */; };
+		86900E5B25C3AD0200654262 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900E5A25C3AD0200654262 /* UploadTweetViewModel.swift */; };
 		86D922B625BC8E1100DA864D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D922B525BC8E1100DA864D /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		86538FF025B9BB9F00D7F85F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		86538FF925BA5C8C00D7F85F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		86538FFC25BA5D2700D7F85F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		86900E5A25C3AD0200654262 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		86D922B525BC8E1100DA864D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				86538FEB25B930CE00D7F85F /* AuthViewModel.swift */,
 				86538FF925BA5C8C00D7F85F /* SearchViewModel.swift */,
 				86D922B525BC8E1100DA864D /* ProfileViewModel.swift */,
+				86900E5A25C3AD0200654262 /* UploadTweetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				86538F8A25B8526B00D7F85F /* ChatBubble.swift in Sources */,
 				86538FD425B8A4BA00D7F85F /* ImagePicker.swift in Sources */,
 				86538FA425B85F7000D7F85F /* FilterButtonView.swift in Sources */,
+				86900E5B25C3AD0200654262 /* UploadTweetViewModel.swift in Sources */,
 				86538F6B25B79F7000D7F85F /* TweetCell.swift in Sources */,
 				86538F9425B85AB500D7F85F /* NewMessageView.swift in Sources */,
 				86538FEC25B930CE00D7F85F /* AuthViewModel.swift in Sources */,
