@@ -13,6 +13,8 @@ class AuthViewModel: ObservableObject {
     @Published var isAuthenticating = false // period during the log in process loading
     @Published var error : Error? // if error show alert
     @Published var user: User? // keep track of the user - Help load user data (going to use our own)
+    // static -- only one isntant of that property is created 
+    static let shared = AuthViewModel() // shared instant -- in order to have access user, auht, user session (User?)
     
     init() {
         // SHOW THE CORRECT VIEW - IS THERE A USER ?
@@ -36,6 +38,7 @@ class AuthViewModel: ObservableObject {
             
             // LOGIN USER
             self.userSession = result?.user
+            self.fetchUser()
             print("DEBUG: Successfully logged in")
 
         }
@@ -81,13 +84,12 @@ class AuthViewModel: ObservableObject {
                                 "profileImageURL" : profileImageURL,
                                 "uid" : user.uid
                     ]
-                    
-                    
-                    
+                    // FETCH THE USER
                     COLLECTION_USERS
                         .document(user.uid)
                         .setData(data) { _ in
                             self.userSession = user
+                            self.fetchUser() // elimiates bug on need to close app to see changes
                             print("DEBUG: Successfully uploaded user data to cloud firebase")
                         }
                 }
@@ -98,7 +100,7 @@ class AuthViewModel: ObservableObject {
     
     func signOut() {
         userSession = nil
-        
+        user = nil
         try? Auth.auth().signOut()
         print("User has signed out")
     }
