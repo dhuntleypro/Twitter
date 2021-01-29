@@ -12,7 +12,7 @@ class AuthViewModel: ObservableObject {
     @Published var userSession : FirebaseAuth.User?  // keep track if user is logged in
     @Published var isAuthenticating = false // period during the log in process loading
     @Published var error : Error? // if error show alert
- //   @Published var user: User? // keep track of the user - Help load user data (going to use our own)
+    @Published var user: User? // keep track of the user - Help load user data (going to use our own)
     
     init() {
         // SHOW THE CORRECT VIEW - IS THERE A USER ?
@@ -103,6 +103,8 @@ class AuthViewModel: ObservableObject {
         print("User has signed out")
     }
     
+    
+    
     // FETCH USER INFORMATION
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
@@ -115,8 +117,7 @@ class AuthViewModel: ObservableObject {
             // usually no error in firebase so no need in include error just _
             .getDocument { (snapshot, _) in
                 guard let data = snapshot?.data() else { return }
-                let user = User(dictionary: data)
-                print("DEBUG: User is \(user.username)")
+                self.user = User(dictionary: data)
             }
     }
 }
