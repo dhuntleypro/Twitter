@@ -53,7 +53,12 @@ struct NewTweetsView: View {
                     
                     , trailing:
                         Button(action: {
-                            viewModel.uploadTweet(caption: captionText)
+                          viewModel.uploadTweet(caption: captionText)
+                            
+                            // Alternitive way to Dismiss but via Completion instead of binding
+//                            viewModel.uploadTweet(caption: captionText) { _ in
+//                                isPresented.toggle()
+//                            }
                         }, label: {
                             Text("Tweet")
                                 .padding(.horizontal)

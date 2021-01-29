@@ -5,7 +5,7 @@
 //  Created by Darrien Huntley on 1/23/21.
 //
 
-import SwiftUI
+import SwiftUI 
 import Firebase
 
 class ProfileViewModel: ObservableObject {
