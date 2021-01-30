@@ -11,26 +11,28 @@ struct ConversationsView: View {
     @State var isShowingNewMessageView = false
     @State var showChat = false
     
+    @ObservedObject var viewModel = ConversationsViewModel()
+        
     var body: some View {
         ZStack(alignment: .bottomTrailing) { // floating bottom button (New tweet)
+            
+            //// (Tip) Navgation that is only active with state of showChat
+            //                NavigationLink( destination: ChatView(),
+            //                                isActive: $showChat,
+            //                                label: {} )
             ScrollView {
-                // (Tip) Navgation that is only active with state of showChat
-                NavigationLink( destination: ChatView(),
-                                isActive: $showChat,
-                                label: {} )
-
-                //LazyVStack { // Only load cells as they become visable on screen
                 VStack {
-                    ForEach(0..<24) { _ in
-                        NavigationLink(destination: ChatView()) {
+                    ForEach(viewModel.recentMessages) { message in
+                        NavigationLink(destination: ChatView(user: message.user)) {
                             ConversationCell()
+                            
                         }
                     }
+                   
                 }
                 .padding()
             }
-            
-            
+                
             Button(action: {
                 self.isShowingNewMessageView.toggle()
             }, label: {

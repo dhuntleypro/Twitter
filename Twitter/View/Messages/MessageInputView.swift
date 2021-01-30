@@ -9,21 +9,33 @@ import SwiftUI
 
 struct MessageInputView: View {
     @Binding var messageText: String
+   // let viewModel : ChatViewModel
+    
+    var action: () -> Void
+    
     var body: some View {
         HStack {
             TextField("Message...", text: $messageText)
                 .textFieldStyle(PlainTextFieldStyle())
                 .frame(minHeight: 30)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: action) {
                 Text("Send")
-            })
+
+            }
+            
+//            Button(action: {
+//                viewModel.sendMessage(messageText)
+//
+//            }, label: {
+//                Text("Send")
+//            })
         }
     }
 }
 
-struct MessageInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageInputView(messageText: .constant("Message..."))
-    }
-}
+//struct MessageInputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MessageInputView(messageText: .constant("Message..."))
+//    }
+//}

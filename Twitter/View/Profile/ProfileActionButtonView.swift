@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileActionButtonView: View {
+    
  //   let isCurrentUser: Bool
     @ObservedObject var viewModel : ProfileViewModel
     
@@ -34,7 +35,7 @@ struct ProfileActionButtonView: View {
                 })
                 .cornerRadius(20)
                 
-                NavigationLink(destination: ChatView()) {
+                NavigationLink(destination: ChatView(user: viewModel.user)) {
                     Text("Message")
                         .frame(width: 180, height: 40)
                         .background(Color.purple)
