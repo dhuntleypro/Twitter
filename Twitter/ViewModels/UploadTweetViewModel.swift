@@ -18,6 +18,8 @@ class UploadTweetViewModel: ObservableObject {
     
     
     func uploadTweet(caption: String) {
+
+        // current iser
         guard let user = AuthViewModel.shared.user else { return }
         
         // create random ID
@@ -33,9 +35,10 @@ class UploadTweetViewModel: ObservableObject {
                                     "likes" : 0,
                                     "id" : docRef.documentID
                                 ]
-        // upload it to our tween section in firebase
+        // upload it to our tweet collection
         docRef.setData(data) { _ in
             print("DEBUG: Uploaded tweet... ")
+            // Dismiss Screen
             self.isPresented = false
         }
         

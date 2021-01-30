@@ -51,10 +51,10 @@ struct TweetDetailView: View {
                 }
                 
                 HStack {
-                    Text("0")
+                    Text("\(tweet.likes)")
                         .font(.system(size: 14, weight: .semibold))
                     
-                    Text("\(tweet.likes)")
+                    Text("Likes")
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundColor(.gray)
                 }
@@ -62,7 +62,7 @@ struct TweetDetailView: View {
             
             Divider()
             
-            TweetActionsView()
+            TweetActionsView(tweet: tweet)
             Spacer()
         }
         .padding()

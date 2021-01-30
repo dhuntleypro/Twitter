@@ -53,6 +53,7 @@
 		86900E7B25C420B300654262 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900E7A25C420B300654262 /* Tweet.swift */; };
 		86900EB525C4596900654262 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900EB425C4596900654262 /* TweetDetailView.swift */; };
 		86900EB825C45F6B00654262 /* TweetActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900EB725C45F6B00654262 /* TweetActionsView.swift */; };
+		86900EC225C480D100654262 /* TweetActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900EC125C480D000654262 /* TweetActionViewModel.swift */; };
 		86D922B625BC8E1100DA864D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D922B525BC8E1100DA864D /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		86900E7A25C420B300654262 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		86900EB425C4596900654262 /* TweetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailView.swift; sourceTree = "<group>"; };
 		86900EB725C45F6B00654262 /* TweetActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionsView.swift; sourceTree = "<group>"; };
+		86900EC125C480D000654262 /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
 		86D922B525BC8E1100DA864D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,7 @@
 				86D922B525BC8E1100DA864D /* ProfileViewModel.swift */,
 				86900E5A25C3AD0200654262 /* UploadTweetViewModel.swift */,
 				86900E7725C4207E00654262 /* FeedViewModel.swift */,
+				86900EC125C480D000654262 /* TweetActionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				86538FA425B85F7000D7F85F /* FilterButtonView.swift in Sources */,
 				86900E5B25C3AD0200654262 /* UploadTweetViewModel.swift in Sources */,
 				86538F6B25B79F7000D7F85F /* TweetCell.swift in Sources */,
+				86900EC225C480D100654262 /* TweetActionViewModel.swift in Sources */,
 				86538F9425B85AB500D7F85F /* NewMessageView.swift in Sources */,
 				86900EB525C4596900654262 /* TweetDetailView.swift in Sources */,
 				86538FEC25B930CE00D7F85F /* AuthViewModel.swift in Sources */,

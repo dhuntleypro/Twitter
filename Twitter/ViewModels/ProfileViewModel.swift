@@ -11,7 +11,10 @@ import Firebase
 class ProfileViewModel: ObservableObject {
     let user: User
     @Published var isFollowed = false
-    
+    //published gets displayed
+    @Published var userTweets = [Tweet]()
+    @Published var likedTweets = [Tweet]()
+
     
     init(user: User) {
         self.user = user
