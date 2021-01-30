@@ -12,9 +12,8 @@ struct ProfileHeaderView: View {
     
     //let user : User // instant in iside of profile view model now (can delete)
     @State var  selectedFilter: TweetFilterOptions = .tweets
-    @Binding var isFollowed : Bool
     
-    let viewModel : ProfileViewModel
+    @ObservedObject var viewModel : ProfileViewModel
    // let user : User
     
     var body: some View {
@@ -43,7 +42,7 @@ struct ProfileHeaderView: View {
             HStack(spacing: 40) {
                 
                 VStack {
-                    Text("32M")
+                    Text("\(viewModel.user.stats.followers)")
                         .font(.system(size: 16 , weight: .bold))
                     
                     Text("Followers")
@@ -52,7 +51,7 @@ struct ProfileHeaderView: View {
                 }
                 
                 VStack {
-                    Text("12")
+                    Text("\(viewModel.user.stats.following)")
                         .font(.system(size: 16 , weight: .bold))
                     
                     Text("Following")
@@ -63,7 +62,7 @@ struct ProfileHeaderView: View {
             }
             .padding()
             
-            ProfileActionButtonView(viewModel: viewModel, isFollowed: $isFollowed)
+            ProfileActionButtonView(viewModel: viewModel)
             
             
             
