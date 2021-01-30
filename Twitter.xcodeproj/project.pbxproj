@@ -54,6 +54,7 @@
 		86900EB525C4596900654262 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900EB425C4596900654262 /* TweetDetailView.swift */; };
 		86900EB825C45F6B00654262 /* TweetActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900EB725C45F6B00654262 /* TweetActionsView.swift */; };
 		86900EC225C480D100654262 /* TweetActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900EC125C480D000654262 /* TweetActionViewModel.swift */; };
+		86900ED525C59CD300654262 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86900ED425C59CD300654262 /* LazyView.swift */; };
 		86D922B625BC8E1100DA864D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D922B525BC8E1100DA864D /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		86900EB425C4596900654262 /* TweetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailView.swift; sourceTree = "<group>"; };
 		86900EB725C45F6B00654262 /* TweetActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionsView.swift; sourceTree = "<group>"; };
 		86900EC125C480D000654262 /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
+		86900ED425C59CD300654262 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		86D922B525BC8E1100DA864D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +254,7 @@
 				86538FC925B88B4D00D7F85F /* CustomTextField.swift */,
 				86538FCE25B8967400D7F85F /* CustomSecureField.swift */,
 				86538FD325B8A4BA00D7F85F /* ImagePicker.swift */,
+				86900ED425C59CD300654262 /* LazyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86900ED525C59CD300654262 /* LazyView.swift in Sources */,
 				86538F7025B7CAC100D7F85F /* SearchView.swift in Sources */,
 				86538FBA25B8850500D7F85F /* TextArea.swift in Sources */,
 				86538FC625B889E800D7F85F /* RegistrationView.swift in Sources */,

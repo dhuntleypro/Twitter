@@ -24,7 +24,7 @@ struct SearchView: View {
                 
                 ForEach(viewModel.users) { user in
                  
-                    NavigationLink(destination: UserProfileView(user: user)) {
+                    NavigationLink(destination: LazyView(UserProfileView(user: user))) {
                         UserCell(user: user)
                     }
                 }
