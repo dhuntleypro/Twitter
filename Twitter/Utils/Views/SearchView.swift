@@ -12,7 +12,7 @@ struct SearchView: View {
     @State var searchText = ""
     
     // VIEW MODEL
-    @ObservedObject var viewModel = SearchViewModel()
+    @ObservedObject var viewModel = SearchViewModel(config: .search)
     
     
     var body: some View {
