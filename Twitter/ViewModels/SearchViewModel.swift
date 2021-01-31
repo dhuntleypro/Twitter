@@ -8,23 +8,41 @@
 import SwiftUI
 import Firebase
 
+enum SearchViewModelConfiguration {
+    case search
+    case newMessage
+}
+
+
 class SearchViewModel: ObservableObject {
     // MODEL
     @Published var users = [User]()
+    private var config: SearchViewModelConfiguration
     
-    init() {
-        fetchUser()
+    init(config: SearchViewModelConfiguration) {
+        self.config = config
+        fetchUser(forConfig: config)
+        
     }
     
     
-    func fetchUser() {
+    func fetchUser(forConfig config : SearchViewModelConfiguration) {
 //        Firestore.firestore()
 //            .collection("users")
         COLLECTION_USERS
             .getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else { return }
-            // CREATE A USER FOR EACH DOCUMENT 
-            self.users = documents.map({ User(dictionary: $0.data()) })
+            let users = documents.map({ User(dictionary: $0.data()) })
+                
+                switch config {
+                case .newMessage :
+                    self.users = users.filter({ !$0.isCurrentUser})
+                case .search :
+                    // CREATE A USER FOR EACH DOCUMENT
+                    self.users = users
+                }
+                
+           
             
             
         }

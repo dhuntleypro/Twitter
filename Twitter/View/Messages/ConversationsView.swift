@@ -13,18 +13,22 @@ struct ConversationsView: View {
     
     @ObservedObject var viewModel = ConversationsViewModel()
         
+    @State var user : User?
     var body: some View {
         ZStack(alignment: .bottomTrailing) { // floating bottom button (New tweet)
             
-            //// (Tip) Navgation that is only active with state of showChat
-            //                NavigationLink( destination: ChatView(),
-            //                                isActive: $showChat,
-            //                                label: {} )
+            // (Tip) Navgation that is only active with state of showChat
+            if let user = user {
+            NavigationLink( destination: LazyView(ChatView(user: user)),
+                                            isActive: $showChat,
+                                            label: {} )
+            }
             ScrollView {
                 VStack {
                     ForEach(viewModel.recentMessages) { message in
-                        NavigationLink(destination: ChatView(user: message.user)) {
-                            ConversationCell()
+                        NavigationLink(destination: LazyView(ChatView(user: message.user))) {
+                            ConversationCell(message: message
+                            )
                             
                         }
                     }
@@ -47,7 +51,7 @@ struct ConversationsView: View {
             .clipShape(Circle())
             .padding()
             .sheet(isPresented: $isShowingNewMessageView, content: {
-                NewMessageView(show: $isShowingNewMessageView, startChat: $showChat)
+                NewMessageView(show: $isShowingNewMessageView, startChat: $showChat, user: $user)
             })
         }
     }
