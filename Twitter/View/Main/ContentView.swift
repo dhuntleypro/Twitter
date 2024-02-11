@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var selectedIndex = 0
     var body: some View {
         Group {
-            if viewModel.userSession != nil {
+//            if viewModel.userSession != nil {
                 
                 NavigationView {
                     VStack {
@@ -22,10 +22,10 @@ struct ContentView: View {
                     .navigationBarTitle(viewModel.tabTitle(forIndex: selectedIndex))
                     .navigationBarTitleDisplayMode(.inline)
                 }
-            } else {
-                LoginView()
-                
-            }
+//            } else {
+//                LoginView()
+//                
+//            }
         }
         
     }
